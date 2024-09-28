@@ -9,8 +9,9 @@
             font-size: 60px;
             margin-top: 0px;
         }
+
         h1 {
-          text-align: center;
+            text-align: center;
         }
     </style>
 </head>
@@ -21,10 +22,9 @@
     <script>
         // Set the date we're counting down to
         var countDownDate = new Date("May 7, 2025 00:00:00").getTime();
+        var x = setInterval(counter, 1000);
 
-        // Update the count down every 1 second
-        var x = setInterval(function () {
-
+        function counter() {
             // Get today's date and time
             var now = new Date().getTime();
 
@@ -46,7 +46,8 @@
                 clearInterval(x);
                 document.getElementById("demo").innerHTML = "УРА! Этот день наступил!";
             }
-        }, 300);
+        }
+        counter();
     </script>
 </body>
 
